@@ -32,7 +32,7 @@ x64/
 *.tli
 *.tlh
 *.tmp
-*.log
+#*.log
 *.vspscc
 *.vssscc
 .builds
