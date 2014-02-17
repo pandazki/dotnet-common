@@ -10,6 +10,7 @@ namespace Pandazki.Common.Log.Simple
     {
         static void Main(string[] args)
         {
+            //see the app.config -> system.diagnostics 
             //simple usage
             Log.Critical("Critical");
             Log.Information("Infomation");
