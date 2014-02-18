@@ -7,4 +7,4 @@ dotnet-common
 Pandazki.Common.Log
 ------
     Simple encapsulation of System.Diagnostics.TraceSource.
-    Supports suto segmente log file by time.(use TimeSplitFileWriterTraceListener)
+    Supports auto segment log file per hour.(use TimeSplitFileWriterTraceListener)

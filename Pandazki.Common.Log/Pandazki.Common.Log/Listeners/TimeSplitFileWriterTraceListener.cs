@@ -10,7 +10,7 @@ namespace Pandazki.Common.Log.Listeners
 {
     /// <summary>
     /// a general log to file listener.
-    /// support auto split log file by time.
+    /// support auto split log file by hour.
     /// </summary>
     public class TimeSplitFileWriterTraceListener : TraceListener
     {
@@ -26,8 +26,8 @@ namespace Pandazki.Common.Log.Listeners
             : base(filename)
         {
             _logWriter = FileTextWriter.CreateSyncLogWriter(
-                (x, y) => (x.Date == y.Date && x.Hour == y.Hour) ? 0 : 1,
-                (x) => string.Format(filename, x)
+                (x, y) => (x.Date == y.Date && x.Hour == y.Hour) ? 0 : 1, //change the delegate for other split conditions
+                (x) => string.Format(filename, x) //format file name
             );
         }
 
